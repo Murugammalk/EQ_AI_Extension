@@ -1,0 +1,36 @@
+.layout {
+  display: flex; flex-direction: column;
+  height: 580px; overflow: hidden;
+  background: var(--bg-base);
+}
+.layout-content {
+  flex: 1; overflow-y: auto; overflow-x: hidden;
+}
+.layout-nav {
+  display: flex; align-items: stretch;
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
+  padding: 0;
+  height: 60px;
+  flex-shrink: 0;
+}
+.nav-btn {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 4px; background: none; border: none;
+  color: var(--text-3); padding: 8px 0;
+  position: relative; transition: color 0.15s;
+}
+.nav-btn:hover { color: var(--text-2); }
+.nav-btn--active { color: var(--gold-300); }
+.nav-btn--active::before {
+  content: "";
+  position: absolute; top: 0; left: 20%; right: 20%;
+  height: 2px;
+  background: var(--gold-grad);
+  border-radius: 0 0 3px 3px;
+}
+.nav-label {
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 0.4px;
+}

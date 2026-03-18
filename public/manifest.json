@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "EQ of AI — Privacy Guard",
+  "version": "2.0.0",
+  "description": "Detects and protects sensitive data before you share it with AI platforms.",
+
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],  
+      "js": ["config.js", "regexPatterns.js", "content.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+
+  "permissions": ["storage", "tabs", "activeTab", "scripting", "cookies"],
+  "host_permissions": ["<all_urls>"],
+
+  "web_accessible_resources": [
+    {
+      "resources": ["eq_logo.jpeg", "eq_logo.png", "eq_icon.ico"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}

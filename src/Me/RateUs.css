@@ -1,0 +1,119 @@
+.rateus-page {
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  min-height: 520px;
+}
+.rateus-back {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  color: var(--text-3);
+  font-size: 12px;
+  cursor: pointer;
+}
+.rateus-back:hover {
+  color: var(--text-1);
+}
+.rateus-title {
+  font-size: 22px;
+  font-weight: 800;
+}
+.rateus-sub {
+  font-size: 12px;
+  color: var(--text-3);
+  text-align: center;
+}
+.rateus-stars {
+  display: flex;
+  gap: 6px;
+  margin: 6px 0;
+}
+.rateus-star {
+  font-size: 34px;
+  background: none;
+  border: none;
+  color: rgba(202, 56, 56, 0.15);
+  cursor: pointer;
+  transition:
+    color 0.12s,
+    transform 0.12s;
+}
+.rateus-star--on {
+  color: var(--gold-300);
+}
+.rateus-star:hover {
+  transform: scale(1.1);
+}
+.rateus-error {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: var(--r-sm);
+  background: rgba(248, 113, 113, 0.08);
+  border: 1px solid rgba(248, 113, 113, 0.2);
+  color: var(--red);
+  font-size: 12px;
+}
+.rateus-textarea {
+  width: 100%;
+  padding: 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  color: var(--text-1);
+  font-size: 12px;
+  font-family: inherit;
+  resize: none;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.rateus-textarea:focus {
+  border-color: var(--border-hi);
+}
+.rateus-textarea::placeholder {
+  color: var(--text-3);
+}
+.rateus-submit {
+  width: 100%;
+  padding: 13px;
+  background: var(--gold-grad);
+  border: none;
+  border-radius: var(--r-sm);
+  color: #0a0a0f;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition:
+    opacity 0.15s,
+    transform 0.15s;
+  margin-top: auto;
+}
+.rateus-submit:hover:not(:disabled) {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+.rateus-submit:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.rateus-success {
+  justify-content: center;
+}
+.rateus-success-icon {
+  font-size: 52px;
+}
+.rateus-success-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--gold-300);
+}
+.rateus-success-sub {
+  font-size: 12px;
+  color: var(--text-3);
+}
